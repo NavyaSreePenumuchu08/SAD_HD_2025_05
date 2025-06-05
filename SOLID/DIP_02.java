@@ -8,32 +8,33 @@ public class DIP_02 {
      * Fix this!
      */
     
-    public static interface Notification {
+      public interface Notification {
         void doNotify();
     }
-
+ 
+    // 2. Concrete implementation
     public static class EmailNotification implements Notification {
         @Override
         public void doNotify() {
             System.out.println("Sending notification via email!");
         }
     }
-
+ 
+    // 3. Employee now depends on the abstraction
     public static class Employee {
-        private EmailNotification emailNotification;
-
-        // Dependency Injection (again) composition
-        public Employee(EmailNotification emailNotification) {
-            this.emailNotification = emailNotification;
+        private Notification notification;  // DIP FIXED: depends on interface
+ 
+        public Employee(Notification notification) {
+            this.notification = notification;
         }
-    
+   
         public void notifyEmployee() {
-            emailNotification.doNotify();
+            notification.doNotify();
         }
     }
-
+ 
     public static void main(String[] args) {
-        EmailNotification emailNotification = new EmailNotification();
+        Notification emailNotification = new EmailNotification(); // Polymorphic
         Employee employee = new Employee(emailNotification);
         employee.notifyEmployee();
     }
