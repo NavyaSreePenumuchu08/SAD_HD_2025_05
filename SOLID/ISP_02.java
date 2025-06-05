@@ -7,42 +7,46 @@ public class ISP_02 {
      * Again, some classes are more simple than other.
      * Fix this without violating the ISP (Interface Segregation Principle)!
      */
-    public static interface Worker {
+    // Split into smaller interfaces
+    public interface Workable {
         void work();
-        void rest();        
     }
-
-    public static class Developer implements Worker {
+ 
+    public interface Restable {
+        void rest();
+    }
+ 
+    public static class Developer implements Workable, Restable {
         @Override
         public void work() {
             System.out.println("Developer is coding ...");
         }
-
+ 
         @Override
         public void rest() {
             System.out.println("Developer is making a break!");
         }
     }
-
-    public static class Robot implements Worker {
+ 
+    public static class Robot implements Workable {
         @Override
         public void work() {
             System.out.println("Robot is working hard ...");
         }
-
-        @Override
-        public void rest() {
-            throw new UnsupportedOperationException("Robot does not need a break!");
-        }        
     }
-
-    public static void workingCycle(Worker worker) {
+ 
+    // Adjust the working cycle for Workable only
+    public static void workingCycle(Workable worker) {
         worker.work();
-        worker.rest();
+ 
+        // Optional: check if it can rest too
+        if (worker instanceof Restable) {
+            ((Restable) worker).rest();
+        }
     }
-
+ 
     public static void main(String[] args) {
-        workingCycle( new Developer() );
-        workingCycle( new Robot() );        
+        workingCycle(new Developer());
+        workingCycle(new Robot());
     }
 }
