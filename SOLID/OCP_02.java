@@ -61,10 +61,10 @@ public class OCP_02 {
 
     public static void main(String[] args) { 
             AreaCalculator calc = new AreaCalculator();
-            System.out.println("Square area: "    + calc.getArea(new Square(3)));      // 9.0
-            System.out.println("Circle area: "    + calc.getArea(new Circle(2)));      // 12.566...
-            System.out.println("Rectangle area: " + calc.getArea(new Rectangle(2, 5))); // 10.0
-            System.out.println("Triangle area: "  + calc.getArea(new Triangle(4, 3))); // 6.0
+            System.out.println("Square area: "    + calc.getArea(new Square(4)));      
+            System.out.println("Circle area: "    + calc.getArea(new Circle(3)));     
+            System.out.println("Rectangle area: " + calc.getArea(new Rectangle(3, 6))); 
+            System.out.println("Triangle area: "  + calc.getArea(new Triangle(5, 4))); 
             }
 }
  
