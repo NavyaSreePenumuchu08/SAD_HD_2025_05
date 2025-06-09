@@ -3,26 +3,7 @@ package SOLID;
 import java.util.HashMap;
 import java.util.Map;
 
-/*
-     * TASK:
-     * How to add a new discount type (customerType) without
-     * violating OCP (Open/Closed Principle)?
-     */
- 
-/**
- * Demonstrates the Open/Closed Principle using the Strategy pattern for discounts.
- * <p>
- * Each customer‐type class implements {@link DiscountStrategy} and therefore can be added
- * without changing the surrounding calculation code.  The {@code @Override} annotations
- * ensure compile‑time checking that the contract is respected.
- */
 interface DiscountStrategy {
-    /**
-     * Calculates the discount (not the final price) to apply for the given amount.
-     *
-     * @param amount the price before discount
-     * @return the monetary value of the discount
-     */
     double applyDiscount(double amount);
 }
  
@@ -47,10 +28,6 @@ class GoldCustomer implements DiscountStrategy {
         return amount * 0.30; // 30 % discount
     }
 }
- 
-/**
- * Calculator that delegates discount computation to the appropriate strategy.
- */
 public class OCP_01 {
  
     public static class DiscountCalculator {

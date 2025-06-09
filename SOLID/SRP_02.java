@@ -1,13 +1,6 @@
 package SOLID;
 
-public class SRP_02 {
-
-    /*
-     * TASK:
-     * Just make this class obeying the SRP (Single Responsibility Principle)!
-     * The method bodies are empty by purpose and there is no main provided.
-     */
-    
+public class SRP_02 {    
     public static final class Employee {
         private final int id;
         private String designation;

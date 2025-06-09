@@ -1,14 +1,6 @@
 package SOLID;
 
 public class LSP_02 {
-    
-    /*
-     * TASK:
-     * The polymorphic function move expect the same behaviour
-     * for all birds, but this isn't the case.
-     * Fix this to obey the LSP (Liskov Substitution Principle)!
-     */
-
     public static abstract class Bird {
         public void move() {
             System.out.println("The bird is moving...");

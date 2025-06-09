@@ -1,16 +1,6 @@
 package SOLID;
 
 public class OCP_02 {
-
-    /*
-     * TASK:
-     * (classical task)
-     * How to add other shapes without violating the OCP
-     * (Open/Closed Principle)?
-     * The interface/class/method bodies are empty by purpose
-     * and there is no main provided.
-     */
-    
    public static abstract class Shape {
         /**
          * @return the area in square units.

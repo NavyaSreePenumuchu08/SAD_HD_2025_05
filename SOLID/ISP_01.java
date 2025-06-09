@@ -1,14 +1,6 @@
 package SOLID;
 
 public class ISP_01 {
-
-    /*
-     * TASK:
-     * This SimplePrinter is not a multi functional printer but a very
-     * simple one.
-     * Please fix this to obey the ISP (Interface Segregation Principle)!
-     */
-    
         public interface Printable {
         void printDocument();
     }

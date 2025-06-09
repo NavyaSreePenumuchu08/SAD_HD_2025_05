@@ -1,12 +1,6 @@
 package SOLID;
 
 public class ISP_02 {
-    
-    /*
-     * TASK:
-     * Again, some classes are more simple than other.
-     * Fix this without violating the ISP (Interface Segregation Principle)!
-     */
     // Split into smaller interfaces
     public interface Workable {
         void work();

@@ -2,17 +2,11 @@ package SOLID;
 
 public class DIP_02 {
 
-    /*
-     * TASK:
-     * The class Employee violates the DIP (Dependency Inversion Principle).
-     * Fix this!
-     */
-    
       public interface Notification {
         void doNotify();
     }
  
-    // 2. Concrete implementation
+    // Concrete implementation
     public static class EmailNotification implements Notification {
         @Override
         public void doNotify() {
@@ -20,7 +14,7 @@ public class DIP_02 {
         }
     }
  
-    // 3. Employee now depends on the abstraction
+    // Employee now depends on the abstraction
     public static class Employee {
         private Notification notification;  // DIP FIXED: depends on interface
  

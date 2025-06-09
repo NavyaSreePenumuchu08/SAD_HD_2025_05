@@ -3,14 +3,7 @@ package SOLID;
 import java.io.FileWriter;
 import java.io.IOException;
  
-public class SRP_01 {
-
-    /*
-     * TASK:
-     * Please apply to the following class "User" the
-     * SRP (Single Responsibility Principle)
-     */
- 
+public class SRP_01 { 
     public static class User {
         private String name;
         private String email;

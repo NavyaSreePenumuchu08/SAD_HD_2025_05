@@ -1,16 +1,6 @@
 package SOLID;
 
-public class LSP_01 {
-
-    /*
-     * TASK:
-     * (classical example)
-     *
-     * The Square class does not behave like a Rectangle when
-     * setting the width and/or height. Please fix this to obey
-     * the LSP (Liskov Substitution Principle).
-     */
- 
+public class LSP_01 { 
     public interface Shape {
         int getArea();
     }
