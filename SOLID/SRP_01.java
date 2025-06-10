@@ -35,7 +35,7 @@ public class SRP_01 {
     }
  
     public static void main(String[] args) {
-        User user = new User("abcc", "abcc@company.com");
+        User user = new User("navya", "navya@company.com");
         StorageAndNoOtherStuffCauseSingleResponsibility StorageAndNoOtherStuffCauseSingleResponsibilityService = new StorageAndNoOtherStuffCauseSingleResponsibility();
         StorageAndNoOtherStuffCauseSingleResponsibilityService.saveUserToFile(user);
     }
