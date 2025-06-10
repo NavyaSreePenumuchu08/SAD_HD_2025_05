@@ -5,13 +5,13 @@ public class ISP_01 {
         void printDocument();
     }
  
-    public interface Scannable {
+    /*public interface Scannable {
         void scanDocument();
     }
  
     public interface Faxable {
         void faxDocument();
-    }
+    } */
  
     public static class SimplePrinter implements Printable {
         @Override
